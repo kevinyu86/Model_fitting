@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>HW5</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">HW5</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="name-xingwang-yu" class="level2">
+<h2 class="anchored" data-anchor-id="name-xingwang-yu">Name: Xingwang Yu</h2>
+</section>
+<section id="homework5-for-st558" class="level2">
+<h2 class="anchored" data-anchor-id="homework5-for-st558">Homework5 for ST558</h2>
+</section>
+<section id="task-1-conceptual-questions" class="level2">
+<h2 class="anchored" data-anchor-id="task-1-conceptual-questions">Task 1: Conceptual Questions</h2>
+<section id="what-is-the-purpose-of-using-cross-validation-when-fitting-a-random-forest-model" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-purpose-of-using-cross-validation-when-fitting-a-random-forest-model">1. What is the purpose of using cross-validation when fitting a random forest model?</h3>
+<p>Overall, cross-validation ensures that the model’s performance is robust, reliable, and generalizable to new data, making it a critical step in the model-building process. In fitting random forest model, 1. cv provides a more accurate estimate of the model’s performance on unseen data compared to a single train/test split. This is because the model is trained and evaluated multiple times on different subsets of the data. 2. it helps in tuning hyperparameters (number of variables) by evaluating the model’s performance across different parameter settings, ensuring the chosen parameters generalize well to new data.</p>
+</section>
+<section id="describe-the-bagged-tree-algorithm." class="level3">
+<h3 class="anchored" data-anchor-id="describe-the-bagged-tree-algorithm.">2. Describe the bagged tree algorithm.</h3>
+<ol type="1">
+<li>Create multiple random bootstrap samples from the original dataset;</li>
+<li>Train a separate desicion tree for each bootstrap sample;</li>
+<li>For regression tasks, the predictions from all the trees are averaged to obtain the final prediction. For classification tasks, the final prediction is obtained through majority voting, where the class with the most votes across all trees is chosen.</li>
+<li>The final prediction for a given input is the aggregated result from all the individual trees. This aggregation helps to reduce the variance of the model and improve its overall performance.</li>
+</ol>
+</section>
+<section id="what-is-meant-by-a-general-linear-model" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-meant-by-a-general-linear-model">3. What is meant by a general linear model?</h3>
+<p>General Linear Model provides a flexible framework for modeling linear relationships between a response variable and multiple predictor variables, making it a foundational tool in statistical analysis and machine learning.</p>
+</section>
+<section id="when-fitting-a-multiple-linear-regression-model-what-does-adding-an-interaction-term-do-that-is-what-does-it-allow-the-model-to-do-differently-as-compared-to-when-it-is-not-included-in-the-model" class="level3">
+<h3 class="anchored" data-anchor-id="when-fitting-a-multiple-linear-regression-model-what-does-adding-an-interaction-term-do-that-is-what-does-it-allow-the-model-to-do-differently-as-compared-to-when-it-is-not-included-in-the-model">4. When fitting a multiple linear regression model, what does adding an interaction term do? That is, what does it allow the model to do differently as compared to when it is not included in the model?</h3>
+<p>Adding interaction terms to a multiple linear regression model allows for the examination of whether the effect of one predictor variable on the response variable depends on the level of another predictor variable. This can provide a more nuanced and accurate understanding of the relationships between variables.</p>
+</section>
+<section id="why-do-we-split-our-data-into-a-training-and-test-set" class="level3">
+<h3 class="anchored" data-anchor-id="why-do-we-split-our-data-into-a-training-and-test-set">5. Why do we split our data into a training and test set?</h3>
+<p>Splitting data into training and test sets is a fundamental practice in machine learning and statistical modeling. The primary purpose is to evaluate the model’s performance on unseen data, ensuring that it generalizes well and is not overfitted to the training data.</p>
+</section>
+</section>
+<section id="task-2-fitting-models" class="level2">
+<h2 class="anchored" data-anchor-id="task-2-fitting-models">Task 2: Fitting Models</h2>
+<section id="quick-edadata-preparation" class="level3">
+<h3 class="anchored" data-anchor-id="quick-edadata-preparation">Quick EDA/Data Preparation</h3>
+<ol type="1">
+<li>Check on missingness and summarize the data, especially with respect to the relationships of the variables to HeartDisease.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: lattice
+
+Attaching package: 'caret'
+
+The following object is masked from 'package:purrr':
+
+    lift</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>randomForest 4.7-1.1
+Type rfNews() to see new features/changes/bug fixes.
+
+Attaching package: 'randomForest'
+
+The following object is masked from 'package:dplyr':
+
+    combine
+
+The following object is masked from 'package:ggplot2':
+
+    margin</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gbm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loaded gbm 2.2.2
+This version of gbm is no longer under development. Consider transitioning to gbm3, https://github.com/gbm-developers/gbm3</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>hd_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"heart.csv"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(hd_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   918 obs. of  12 variables:
+ $ Age           : int  40 49 37 48 54 39 45 54 37 48 ...
+ $ Sex           : chr  "M" "F" "M" "F" ...
+ $ ChestPainType : chr  "ATA" "NAP" "ATA" "ASY" ...
+ $ RestingBP     : int  140 160 130 138 150 120 130 110 140 120 ...
+ $ Cholesterol   : int  289 180 283 214 195 339 237 208 207 284 ...
+ $ FastingBS     : int  0 0 0 0 0 0 0 0 0 0 ...
+ $ RestingECG    : chr  "Normal" "Normal" "ST" "Normal" ...
+ $ MaxHR         : int  172 156 98 108 122 170 170 142 130 120 ...
+ $ ExerciseAngina: chr  "N" "N" "N" "Y" ...
+ $ Oldpeak       : num  0 1 0 1.5 0 0 0 0 1.5 0 ...
+ $ ST_Slope      : chr  "Up" "Flat" "Up" "Flat" ...
+ $ HeartDisease  : int  0 1 0 1 0 0 0 0 1 0 ...</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># do basic summary</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>psych<span class="sc">::</span><span class="fu">describe</span>(hd_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                vars   n   mean     sd median trimmed   mad  min   max range
+Age                1 918  53.51   9.43   54.0   53.71 10.38 28.0  77.0  49.0
+Sex*               2 918   1.79   0.41    2.0    1.86  0.00  1.0   2.0   1.0
+ChestPainType*     3 918   1.78   0.96    1.0    1.66  0.00  1.0   4.0   3.0
+RestingBP          4 918 132.40  18.51  130.0  131.50 14.83  0.0 200.0 200.0
+Cholesterol        5 918 198.80 109.38  223.0  204.41 68.20  0.0 603.0 603.0
+FastingBS          6 918   0.23   0.42    0.0    0.17  0.00  0.0   1.0   1.0
+RestingECG*        7 918   1.99   0.63    2.0    1.99  0.00  1.0   3.0   2.0
+MaxHR              8 918 136.81  25.46  138.0  137.23 26.69 60.0 202.0 142.0
+ExerciseAngina*    9 918   1.40   0.49    1.0    1.38  0.00  1.0   2.0   1.0
+Oldpeak           10 918   0.89   1.07    0.6    0.74  0.89 -2.6   6.2   8.8
+ST_Slope*         11 918   2.36   0.61    2.0    2.41  0.00  1.0   3.0   2.0
+HeartDisease      12 918   0.55   0.50    1.0    0.57  0.00  0.0   1.0   1.0
+                 skew kurtosis   se
+Age             -0.20    -0.40 0.31
+Sex*            -1.42     0.02 0.01
+ChestPainType*   0.79    -0.72 0.03
+RestingBP        0.18     3.23 0.61
+Cholesterol     -0.61     0.10 3.61
+FastingBS        1.26    -0.41 0.01
+RestingECG*      0.01    -0.50 0.02
+MaxHR           -0.14    -0.46 0.84
+ExerciseAngina*  0.39    -1.85 0.02
+Oldpeak          1.02     1.18 0.04
+ST_Slope*       -0.38    -0.67 0.02
+HeartDisease    -0.21    -1.96 0.02</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check missing value</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>sum_na <span class="ot">&lt;-</span> <span class="cf">function</span>(column) {</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(<span class="fu">is.na</span>(column))</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>na_counts <span class="ot">&lt;-</span> hd_df <span class="sc">|&gt;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">everything</span>(), sum_na))</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>na_counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Age Sex ChestPainType RestingBP Cholesterol FastingBS RestingECG MaxHR
+1   0   0             0         0           0         0          0     0
+  ExerciseAngina Oldpeak ST_Slope HeartDisease
+1              0       0        0            0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remove odd observations which RestingBP and Cholesterol = 0</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>hd_df <span class="ot">&lt;-</span> hd_df <span class="sc">|&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(RestingBP <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> Cholesterol <span class="sc">&gt;</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Create a new variable that is a factor version of the HeartDisease variable. Remove the ST_Slope variable and the original HeartDisease variable.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>hd_df <span class="ot">&lt;-</span> hd_df <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">HeartDiseaseF =</span> <span class="fu">as.factor</span>(HeartDisease)) <span class="sc">|&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>HeartDisease, <span class="sc">-</span>ST_Slope)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>Create dummy columns corresponding to the values of Sex, ExerciseAngina, ChestPainType, and RestingECG.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>dummies <span class="ot">&lt;-</span> <span class="fu">dummyVars</span>( <span class="sc">~</span> Sex <span class="sc">+</span> ExerciseAngina <span class="sc">+</span> ChestPainType <span class="sc">+</span> RestingECG, <span class="at">data =</span> hd_df)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>dummy_col <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">predict</span>(dummies, <span class="at">newdata =</span> hd_df))</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># add dummies columns to dataset</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>hd_df_dummy <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(hd_df, dummy_col) <span class="sc">|&gt;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>Sex, <span class="sc">-</span>ExerciseAngina, <span class="sc">-</span>ChestPainType, <span class="sc">-</span>RestingECG)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(hd_df_dummy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   746 obs. of  18 variables:
+ $ Age             : int  40 49 37 48 54 39 45 54 37 48 ...
+ $ RestingBP       : int  140 160 130 138 150 120 130 110 140 120 ...
+ $ Cholesterol     : int  289 180 283 214 195 339 237 208 207 284 ...
+ $ FastingBS       : int  0 0 0 0 0 0 0 0 0 0 ...
+ $ MaxHR           : int  172 156 98 108 122 170 170 142 130 120 ...
+ $ Oldpeak         : num  0 1 0 1.5 0 0 0 0 1.5 0 ...
+ $ HeartDiseaseF   : Factor w/ 2 levels "0","1": 1 2 1 2 1 1 1 1 2 1 ...
+ $ SexF            : num  0 1 0 1 0 0 1 0 0 1 ...
+ $ SexM            : num  1 0 1 0 1 1 0 1 1 0 ...
+ $ ExerciseAnginaN : num  1 1 1 0 1 1 1 1 0 1 ...
+ $ ExerciseAnginaY : num  0 0 0 1 0 0 0 0 1 0 ...
+ $ ChestPainTypeASY: num  0 0 0 1 0 0 0 0 1 0 ...
+ $ ChestPainTypeATA: num  1 0 1 0 0 0 1 1 0 1 ...
+ $ ChestPainTypeNAP: num  0 1 0 0 1 1 0 0 0 0 ...
+ $ ChestPainTypeTA : num  0 0 0 0 0 0 0 0 0 0 ...
+ $ RestingECGLVH   : num  0 0 0 0 0 0 0 0 0 0 ...
+ $ RestingECGNormal: num  1 1 0 1 1 1 1 1 1 1 ...
+ $ RestingECGST    : num  0 0 1 0 0 0 0 0 0 0 ...</code></pre>
+</div>
+</div>
+</section>
+<section id="split-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="split-the-data">Split the data</h3>
+<p>In this part, I will split the data into training and test sets at 80/20.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3033</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>intrain <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(<span class="at">y =</span> hd_df<span class="sc">$</span>Age, <span class="at">p=</span> <span class="fl">0.8</span>, <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>training <span class="ot">&lt;-</span> hd_df[intrain,]</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>testing <span class="ot">&lt;-</span> hd_df[<span class="sc">-</span>intrain,]</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>training_dum <span class="ot">&lt;-</span> hd_df_dummy[intrain,]</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>testing_dum <span class="ot">&lt;-</span> hd_df_dummy[<span class="sc">-</span>intrain,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="knn" class="level3">
+<h3 class="anchored" data-anchor-id="knn">kNN</h3>
+<p>In this part, I will fit a kNN model. Firstly, I will train the kNN model using repeated 10 fold cross-validation. Then, the best tunning K will be selected, and lastly, the testing data will be used to evaluate the model performance.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>tunningK <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">40</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>knn_fit <span class="ot">&lt;-</span> <span class="fu">train</span>(HeartDiseaseF <span class="sc">~</span>., </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">data =</span> training_dum, </span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">"knn"</span>,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">trControl=</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"repeatedcv"</span>, <span class="at">number =</span> <span class="dv">10</span>, <span class="at">repeats =</span> <span class="dv">3</span>),</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">preProcess =</span> <span class="fu">c</span>(<span class="st">"center"</span>, <span class="st">"scale"</span>),</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">tuneGrid =</span> <span class="fu">data.frame</span>(<span class="at">k =</span> tunningK))</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>knn_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>k-Nearest Neighbors 
+
+598 samples
+ 17 predictor
+  2 classes: '0', '1' 
+
+Pre-processing: centered (17), scaled (17) 
+Resampling: Cross-Validated (10 fold, repeated 3 times) 
+Summary of sample sizes: 539, 538, 538, 538, 539, 538, ... 
+Resampling results across tuning parameters:
+
+  k   Accuracy   Kappa    
+   1  0.7635876  0.5262569
+   2  0.7652542  0.5289339
+   3  0.8054237  0.6099913
+   4  0.8093032  0.6180520
+   5  0.8232580  0.6459357
+   6  0.8115443  0.6225206
+   7  0.8199153  0.6390655
+   8  0.8199341  0.6392235
+   9  0.8221186  0.6434275
+  10  0.8254520  0.6502833
+  11  0.8293691  0.6579164
+  12  0.8311111  0.6615789
+  13  0.8322034  0.6635718
+  14  0.8289077  0.6569642
+  15  0.8261111  0.6512645
+  16  0.8272505  0.6535044
+  17  0.8216478  0.6424468
+  18  0.8249812  0.6491147
+  19  0.8244256  0.6479710
+  20  0.8165913  0.6324558
+  21  0.8210640  0.6413323
+  22  0.8221940  0.6436360
+  23  0.8199718  0.6391284
+  24  0.8216478  0.6425608
+  25  0.8194068  0.6380694
+  26  0.8132957  0.6259415
+  27  0.8155179  0.6303220
+  28  0.8149435  0.6293590
+  29  0.8155273  0.6305751
+  30  0.8143974  0.6283219
+  31  0.8166196  0.6329585
+  32  0.8188512  0.6374477
+  33  0.8177307  0.6351885
+  34  0.8216290  0.6430164
+  35  0.8210640  0.6419000
+  36  0.8216196  0.6430362
+  37  0.8221751  0.6440810
+  38  0.8227213  0.6452132
+  39  0.8216102  0.6428795
+  40  0.8232768  0.6461933
+
+Accuracy was used to select the optimal model using the largest value.
+The final value used for the model was k = 13.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check the testing data</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>knn_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(knn_fit, <span class="at">newdata =</span> testing_dum)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(knn_test_pred, testing_dum<span class="sc">$</span>HeartDiseaseF)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+          Reference
+Prediction  0  1
+         0 70 24
+         1 11 43
+                                          
+               Accuracy : 0.7635          
+                 95% CI : (0.6868, 0.8294)
+    No Information Rate : 0.5473          
+    P-Value [Acc &gt; NIR] : 4.11e-08        
+                                          
+                  Kappa : 0.5146          
+                                          
+ Mcnemar's Test P-Value : 0.04252         
+                                          
+            Sensitivity : 0.8642          
+            Specificity : 0.6418          
+         Pos Pred Value : 0.7447          
+         Neg Pred Value : 0.7963          
+             Prevalence : 0.5473          
+         Detection Rate : 0.4730          
+   Detection Prevalence : 0.6351          
+      Balanced Accuracy : 0.7530          
+                                          
+       'Positive' Class : 0               
+                                          </code></pre>
+</div>
+</div>
+<p>From the kNN model, the final value used for the model was k = 13. The accuracy is 0.7635.</p>
+</section>
+<section id="logistic-regression" class="level3">
+<h3 class="anchored" data-anchor-id="logistic-regression">Logistic Regression</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>lr_model1 <span class="ot">&lt;-</span> <span class="fu">train</span>(HeartDiseaseF <span class="sc">~</span>., </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">data =</span> training, </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">"glm"</span>,</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">trControl=</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"repeatedcv"</span>,</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">number =</span> <span class="dv">10</span>, <span class="at">repeats =</span> <span class="dv">3</span>),</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">family =</span> binomial)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>lr_model2 <span class="ot">&lt;-</span> <span class="fu">train</span>(HeartDiseaseF <span class="sc">~</span> Cholesterol <span class="sc">+</span> FastingBS <span class="sc">+</span> RestingECG <span class="sc">+</span> MaxHR <span class="sc">+</span> ExerciseAngina, </span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">data =</span> training, </span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">"glm"</span>,</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">trControl=</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"repeatedcv"</span>,</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">number =</span> <span class="dv">10</span>, <span class="at">repeats =</span> <span class="dv">3</span>),</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>                 <span class="at">family =</span> binomial)</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>lr_model3 <span class="ot">&lt;-</span> <span class="fu">train</span>(HeartDiseaseF <span class="sc">~</span> ChestPainType <span class="sc">+</span> Cholesterol <span class="sc">+</span> FastingBS <span class="sc">+</span> MaxHR <span class="sc">+</span> ExerciseAngina <span class="sc">+</span> Oldpeak, </span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>                 <span class="at">data =</span> training, </span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">"glm"</span>,</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>                 <span class="at">trControl=</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"repeatedcv"</span>,</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">number =</span> <span class="dv">10</span>, <span class="at">repeats =</span> <span class="dv">3</span>),</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>                 <span class="at">family =</span> binomial)</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lr_model1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+NULL
+
+Coefficients:
+                  Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)      -3.855828   1.762247  -2.188  0.02867 *  
+Age               0.023488   0.015613   1.504  0.13248    
+SexM              1.624459   0.319432   5.085 3.67e-07 ***
+ChestPainTypeATA -2.085584   0.377293  -5.528 3.24e-08 ***
+ChestPainTypeNAP -1.320801   0.298649  -4.423 9.75e-06 ***
+ChestPainTypeTA  -1.469439   0.515062  -2.853  0.00433 ** 
+RestingBP         0.009208   0.007439   1.238  0.21578    
+Cholesterol       0.005336   0.002022   2.638  0.00833 ** 
+FastingBS         0.709915   0.343783   2.065  0.03892 *  
+RestingECGNormal  0.013437   0.307658   0.044  0.96516    
+RestingECGST     -0.202303   0.413550  -0.489  0.62471    
+MaxHR            -0.013038   0.005921  -2.202  0.02767 *  
+ExerciseAnginaY   1.363005   0.275174   4.953 7.30e-07 ***
+Oldpeak           0.861284   0.143357   6.008 1.88e-09 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 828.34  on 597  degrees of freedom
+Residual deviance: 429.74  on 584  degrees of freedom
+AIC: 457.74
+
+Number of Fisher Scoring iterations: 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lr_model2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+NULL
+
+Coefficients:
+                  Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)       1.907720   0.842087   2.265  0.02348 *  
+Cholesterol       0.003356   0.001689   1.987  0.04687 *  
+FastingBS         0.788896   0.292932   2.693  0.00708 ** 
+RestingECGNormal -0.426130   0.254593  -1.674  0.09418 .  
+RestingECGST     -0.445654   0.340310  -1.310  0.19035    
+MaxHR            -0.025140   0.004788  -5.251 1.52e-07 ***
+ExerciseAnginaY   2.376332   0.225783  10.525  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 828.34  on 597  degrees of freedom
+Residual deviance: 570.01  on 591  degrees of freedom
+AIC: 584.01
+
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lr_model3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+NULL
+
+Coefficients:
+                  Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)       0.777380   0.883134   0.880  0.37872    
+ChestPainTypeATA -2.073276   0.365590  -5.671 1.42e-08 ***
+ChestPainTypeNAP -1.327726   0.282201  -4.705 2.54e-06 ***
+ChestPainTypeTA  -1.206304   0.497273  -2.426  0.01527 *  
+Cholesterol       0.003435   0.001884   1.823  0.06823 .  
+FastingBS         1.003539   0.321935   3.117  0.00183 ** 
+MaxHR            -0.017172   0.005319  -3.228  0.00125 ** 
+ExerciseAnginaY   1.385511   0.262277   5.283 1.27e-07 ***
+Oldpeak           0.890196   0.137149   6.491 8.54e-11 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 828.34  on 597  degrees of freedom
+Residual deviance: 460.98  on 589  degrees of freedom
+AIC: 478.98
+
+Number of Fisher Scoring iterations: 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># choose the best model, lr_model1, according to smaller AIC.</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check the testing data</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>lr_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(lr_model1, <span class="at">newdata =</span> testing)</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(lr_test_pred, testing<span class="sc">$</span>HeartDiseaseF)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+          Reference
+Prediction  0  1
+         0 68 23
+         1 13 44
+                                          
+               Accuracy : 0.7568          
+                 95% CI : (0.6795, 0.8235)
+    No Information Rate : 0.5473          
+    P-Value [Acc &gt; NIR] : 1.09e-07        
+                                          
+                  Kappa : 0.5027          
+                                          
+ Mcnemar's Test P-Value : 0.1336          
+                                          
+            Sensitivity : 0.8395          
+            Specificity : 0.6567          
+         Pos Pred Value : 0.7473          
+         Neg Pred Value : 0.7719          
+             Prevalence : 0.5473          
+         Detection Rate : 0.4595          
+   Detection Prevalence : 0.6149          
+      Balanced Accuracy : 0.7481          
+                                          
+       'Positive' Class : 0               
+                                          </code></pre>
+</div>
+</div>
+<p>According to the AIC value of the 3 logistic regression models, lr_model1 was chosen as the best model. Use the testing data set, the accuracy of the model is 0.7568.</p>
+</section>
+<section id="tree-models" class="level3">
+<h3 class="anchored" data-anchor-id="tree-models">Tree Models</h3>
+<ol type="1">
+<li>Classification tree model</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1001</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>ct_fit <span class="ot">&lt;-</span> <span class="fu">train</span>(HeartDiseaseF <span class="sc">~</span> ., </span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">data =</span> training, </span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">"rpart"</span>,</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">trControl=</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"repeatedcv"</span>,</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">number =</span> <span class="dv">10</span>, <span class="at">repeats =</span> <span class="dv">3</span>),</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">tuneLength =</span> <span class="dv">100</span>)</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co"># check the testing data</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>ct_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(ct_fit, <span class="at">newdata =</span> testing)</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(<span class="fu">table</span>(ct_test_pred, testing<span class="sc">$</span>HeartDiseaseF))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+            
+ct_test_pred  0  1
+           0 69 27
+           1 12 40
+                                          
+               Accuracy : 0.7365          
+                 95% CI : (0.6578, 0.8054)
+    No Information Rate : 0.5473          
+    P-Value [Acc &gt; NIR] : 1.648e-06       
+                                          
+                  Kappa : 0.4577          
+                                          
+ Mcnemar's Test P-Value : 0.02497         
+                                          
+            Sensitivity : 0.8519          
+            Specificity : 0.5970          
+         Pos Pred Value : 0.7187          
+         Neg Pred Value : 0.7692          
+             Prevalence : 0.5473          
+         Detection Rate : 0.4662          
+   Detection Prevalence : 0.6486          
+      Balanced Accuracy : 0.7244          
+                                          
+       'Positive' Class : 0               
+                                          </code></pre>
+</div>
+</div>
+<p>The classification tree model return the testing data set at accuracy of 0.7365.</p>
+<ol start="2" type="1">
+<li>Random forest model</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1001</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>tuneGrid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">mtry =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>))</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>rf_fit <span class="ot">&lt;-</span> <span class="fu">train</span>(HeartDiseaseF <span class="sc">~</span> ., </span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">data =</span> training, </span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">"rf"</span>,</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">trControl=</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"repeatedcv"</span>,</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">number =</span> <span class="dv">10</span>, <span class="at">repeats =</span> <span class="dv">3</span>),</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>                 <span class="at">tuneGrid =</span> tuneGrid)</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="co">#train final model</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>final_rf <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(HeartDiseaseF <span class="sc">~</span> .,</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>                         <span class="at">data =</span> training, </span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>                         <span class="at">mtry =</span> rf_fit<span class="sc">$</span>bestTune<span class="sc">$</span>mtry)</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="co"># check the testing data</span></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>rf_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(final_rf, <span class="at">newdata =</span> testing)</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(<span class="fu">table</span>(rf_test_pred, testing<span class="sc">$</span>HeartDiseaseF))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+            
+rf_test_pred  0  1
+           0 70 23
+           1 11 44
+                                         
+               Accuracy : 0.7703         
+                 95% CI : (0.694, 0.8354)
+    No Information Rate : 0.5473         
+    P-Value [Acc &gt; NIR] : 1.494e-08      
+                                         
+                  Kappa : 0.5291         
+                                         
+ Mcnemar's Test P-Value : 0.05923        
+                                         
+            Sensitivity : 0.8642         
+            Specificity : 0.6567         
+         Pos Pred Value : 0.7527         
+         Neg Pred Value : 0.8000         
+             Prevalence : 0.5473         
+         Detection Rate : 0.4730         
+   Detection Prevalence : 0.6284         
+      Balanced Accuracy : 0.7605         
+                                         
+       'Positive' Class : 0              
+                                         </code></pre>
+</div>
+</div>
+<p>The random forest model return the testing data set at accuracy of 0.7568.</p>
+<ol start="3" type="1">
+<li>Boosted tree model</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1001</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>gr <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">shrinkage =</span> <span class="fl">0.1</span>,</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">interaction.depth =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">n.trees =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">200</span>),</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">n.minobsinnode =</span> <span class="dv">10</span>)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>gbm_fit <span class="ot">&lt;-</span> <span class="fu">train</span>(HeartDiseaseF <span class="sc">~</span> ., </span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>                 <span class="at">data =</span> training, </span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">method =</span> <span class="st">"gbm"</span>,</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>                 <span class="at">trControl=</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"repeatedcv"</span>,</span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>                                         <span class="at">number =</span> <span class="dv">10</span>, <span class="at">repeats =</span> <span class="dv">3</span>),</span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>                 <span class="at">tuneGrid =</span> gr,</span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>                 <span class="at">verbose =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a><span class="co"># check the testing data</span></span>
+<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a>gbm_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(gbm_fit, <span class="at">newdata =</span> testing)</span>
+<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(<span class="fu">table</span>(gbm_test_pred, testing<span class="sc">$</span>HeartDiseaseF))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+             
+gbm_test_pred  0  1
+            0 67 22
+            1 14 45
+                                          
+               Accuracy : 0.7568          
+                 95% CI : (0.6795, 0.8235)
+    No Information Rate : 0.5473          
+    P-Value [Acc &gt; NIR] : 1.09e-07        
+                                          
+                  Kappa : 0.504           
+                                          
+ Mcnemar's Test P-Value : 0.2433          
+                                          
+            Sensitivity : 0.8272          
+            Specificity : 0.6716          
+         Pos Pred Value : 0.7528          
+         Neg Pred Value : 0.7627          
+             Prevalence : 0.5473          
+         Detection Rate : 0.4527          
+   Detection Prevalence : 0.6014          
+      Balanced Accuracy : 0.7494          
+                                          
+       'Positive' Class : 0               
+                                          </code></pre>
+</div>
+</div>
+<p>The GBM model return the testing data set at accuracy of 0.75.</p>
+</section>
+<section id="wrap-up" class="level3">
+<h3 class="anchored" data-anchor-id="wrap-up">Wrap up</h3>
+<p>As shown above, the accuracy on the test data set of each model are: 1. kNN: 0.7635 2. Logistic regression:0.7568 3. Classification tree: 0.7365 4. Random forest: 0.7568 5. Boosted tree: 0.75</p>
+<p>We could conclude that the best model is kNN.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
